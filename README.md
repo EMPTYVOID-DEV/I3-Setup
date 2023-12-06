@@ -1,6 +1,6 @@
 # My configs Repo 🚀
 
-Welcome to my personal configurations repository! This space is dedicated to sharing my customized settings for Linux, including terminals (i3, rofi), neovim, and web development tools focused on Svelte and TypeScript. Let's make your development environment as awesome as possible! 💻🌟
+Welcome to my personal configurations repository! This space is dedicated to sharing my customized settings for Linux, including i3 , rofi, terminals, neovim. Let's make your development environment as awesome as possible! 💻🌟
 
 ## Table of Contents
 
@@ -11,7 +11,6 @@ Welcome to my personal configurations repository! This space is dedicated to sha
     - [Terminals](#terminals)
     - [Rofi](#rofi)
   - [Neovim](#neovim)
-  - [Web Development](#web-development)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -25,12 +24,6 @@ Welcome to my personal configurations repository! This space is dedicated to sha
   - `rofi/`: Customizations for the Rofi application launcher.
 
 - `nvim/`: Neovim configuration, primarily based on LazyVim with additional customizations.
-
-- `web/`: Web development configurations.
-  - `svelte/`: Configurations specific to Svelte projects.
-  - `typescript/`: Settings for TypeScript development.
-  - `eslint/`: ESLint configurations for maintaining code quality.
-  - `prettier/`: Prettier setup for consistent code formatting.
 
 ## Configurations
 
@@ -51,10 +44,6 @@ Rofi is the launcher, switcher, and dmenu replacement that I use to quickly navi
 ### Neovim
 
 My neovim configuration is tailored for web development, with robust support for Svelte and TypeScript. Plugins, key mappings, and color schemes are carefully chosen to enhance your coding experience.
-
-### Web Development
-
-For web development, I've fine-tuned my configurations to cater specifically to Svelte and TypeScript projects. Whether you're building a frontend application or a full-stack solution, these settings will boost your development workflow.
 
 ## Usage
 
