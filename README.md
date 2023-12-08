@@ -44,7 +44,7 @@ git clone https://github.com/Shinji13/I3-Setup
 3. Run install.sh and select a theme.
 
 ```bash
-./install.sh
+./setup.sh
 ```
 
 This script will configure the files for you. Reload i3 with `Win+Shift+R`, and you're good to go.
