@@ -22,6 +22,7 @@ Before getting started, ensure you have the following packages installed:
 - [feh image viewer](https://github.com/derf/feh)
 - [blueman, a Bluetooth manager](https://github.com/blueman-project/blueman)
 - [brightnessctl](https://github.com/Hummer12007/brightnessctl)
+- [Maim for screenshots](https://github.com/naelstrof/maim)
 - [JetBrains Mono font](https://www.jetbrains.com/lp/mono/)
 - [FontAwesome](https://fontawesome.com/download)
 - [Noto Sans Modi](https://www.cufonfonts.com/font/noto-sans-modi)

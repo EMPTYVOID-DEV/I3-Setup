@@ -40,10 +40,18 @@ font-2 ="Noto Sans Modi:size=10;1"
 
 #modules 
 modules-left =i3 spotify
-modules-right =memory battery date brightnessctl bluetooth pavucontrol
+modules-right =memory battery date brightnessctl bluetooth pavucontrol screenshot
 
 #i3 poly bar settings
 wm-restack=i3
+
+[module/screenshot]
+type=custom/script
+exec=echo 
+click-left=maim "$HOME/Pictures/Screenshots/$(date)"
+click-right=maim --select "$HOME/Pictures/Screenshots/$(date)"
+format-foreground=${colors.yellow}
+
 
 [module/pavucontrol]
 type = custom/script
