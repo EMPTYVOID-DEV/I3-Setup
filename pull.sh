@@ -11,11 +11,16 @@ theme=""
 configPath=$HOME/.config
 
 copyStatic() {
+	echo -e "$valid_color copying configs $nc"
 	cp $configPath/i3/config .
 	cp $configPath/i3Scripts/* ./scripts/
 }
 
 copyTheme() {
+	read -p "Do you want to change the theme (y/n) : " themeChange
+	if [[ $themeChange != "y" ]]; then
+		return
+	fi
 	echo -e "$valid_color Either update existing theme or add new theme. $nc"
 	select option in "${themesArray[@]}" new; do
 		if [[ ! $REPLY =~ ^[0-9]+$ ]]; then
