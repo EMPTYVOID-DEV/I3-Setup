@@ -1,9 +1,8 @@
 trap "echo -e '\n'; exit " SIGINT
 
-declare -A themesMap
-themesMap["Purple-Twilight"]=" Dive into the cosmic elegance of Purple Twilight – a deep, starlit backdrop adorned with vibrant hues of purple and magenta, casting a mesmerizing aura on your Linux desktop. Illuminate your workspace with the celestial charm of this theme."
-numberOfThemes="${#themesMap[@]}"
-selectedTheme="Purple-Twilight"
+themesArray=($(ls ./themes/))
+numberOfThemes="${#themesArray[@]}"
+selectedTheme="${themesArray[0]}"
 error_color='\e[38;2;255;0;0m'
 valid_color='\e[38;2;0;255;0m'
 warning_color='\e[38;2;255;255;0m'
@@ -12,14 +11,13 @@ configPath=$HOME/.config
 
 getTheme() {
 	PS3="Select a theme: "
-	select theme in "${!themesMap[@]}"; do
-		if ((0 < $REPLY && $REPLY <= $numberOfThemes)); then
+	select theme in "${themesArray[@]}"; do
+		if ((0 < REPLY && REPLY <= $numberOfThemes)); then
 			echo -e "$valid_color Excellent You chose $theme.$nc"
-			echo -e "${themesMap[$theme]}"
 			selectedTheme=$theme
 			break
 		else
-			echo "$error_color Invalid input. To select a theme choose a number between 1 and $numberOfThemes .$nc"
+			echo -e "$error_color Invalid input. To select a theme choose a number between 1 and $numberOfThemes .$nc"
 			exit 1
 		fi
 	done
@@ -55,10 +53,11 @@ copyUtils() {
 }
 
 copyScripts() {
-	if [[ -d $configPath/scripts ]]; then
-		cp ./scripts/* $configPath/scripts/ 2>>/dev/null
+	if [[ -d $configPath/i3Scripts ]]; then
+		cp ./scripts/* $configPath/i3Scripts/ 2>>/dev/null
 	else
-		cp -r ./scripts/ $configPath 2>>/dev/null
+		mkdir $configPath/i3Scripts
+		cp -r ./scripts/* $configPath/i3Scripts/ 2>>/dev/null
 	fi
 	if [[ $? = 0 ]]; then
 		echo -e "$valid_color Successfully copying configuration scripts.$nc"

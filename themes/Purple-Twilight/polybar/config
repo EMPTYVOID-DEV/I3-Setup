@@ -14,7 +14,7 @@ gray=#4e5361
 # general settings 
 enable-ipc = true
 bottom = true
-width = 95%
+width = 100%
 height = 25
 radius=9.0
 
@@ -53,6 +53,7 @@ click-right=maim --select "$HOME/Pictures/Screenshots/$(date)"
 format-foreground=${colors.yellow}
 
 
+
 [module/pavucontrol]
 type = custom/script
 exec = echo 
@@ -61,7 +62,7 @@ format-foreground=${colors.cyan}
 
 [module/brightnessctl]
 type = custom/script
-exec = $HOME/.config/scripts/brightnessctl.sh
+exec = $HOME/.config/i3Scripts/brightnessctl.sh
 click-left = exec brightnessctl set +5%
 click-right = exec brightnessctl set 5%-
 interval = 0.5
@@ -114,7 +115,7 @@ type = internal/memory
 format = <label> <bar-used>
 label = RAM
 
-bar-used-width = 30
+bar-used-width = 18
 bar-used-foreground-0 =  ${colors.green}
 bar-used-foreground-1 = ${colors.green}
 bar-used-foreground-2 = ${colors.green}
@@ -130,10 +131,10 @@ bar-used-empty-foreground = #444444
 
 [module/bluetooth]
 type = custom/script
-exec = $HOME/.config/scripts/bluetooth.sh
+exec = $HOME/.config/i3Scripts/bluetooth.sh
 interval = 2
 click-left = blueman-manager
-click-right = exec $HOME/.config/scripts/toggle_bluetooth.sh
+click-right = exec $HOME/.config/i3Scripts/toggle_bluetooth.sh
 format-foreground = ${colors.blue}
 
 
@@ -152,14 +153,14 @@ strip-wsnumbers = true
 index-sort = true
 fuzzy-match = true
 
-ws-icon-0 = 1;1 
-ws-icon-1 = 2;2 
-ws-icon-2 = 3;3 
-ws-icon-3 = 4;4 
-ws-icon-4 = 5;5 
-ws-icon-5 = 6;6 
-ws-icon-6 = 7;7 
-ws-icon-7 = 8;8 
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;Discord
+ws-icon-5 = 6;Figma
+ws-icon-6 = 7;Terminal
+ws-icon-7 = 8;Random
 ws-icon-8 = 9;9
 
 label-dimmed-underline = ${root.background}
@@ -191,7 +192,8 @@ type = custom/script
 interval = 1
 format-prefix = "  "  
 format = <label>
-exec = $HOME/.config/scripts/spotify.py  
+exec = $HOME/.config/i3Scripts/spotify.py  
 format-underline = ${colors.yellow}
 
 ; vim:ft=dosini
+
