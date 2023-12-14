@@ -42,7 +42,7 @@ git clone https://github.com/Shinji13/I3-Setup
  chmod +x setup.sh
 ```
 
-3. Run install.sh and select a theme.
+3. Run setup.sh and select a theme.
 
 ```bash
 ./setup.sh
