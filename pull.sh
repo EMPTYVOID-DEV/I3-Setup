@@ -64,6 +64,7 @@ gitCommit() {
 		read -p "Very well write a commit message : " commitMsg
 		git add .
 		git commit -m "$commitMsg"
+		git push
 	fi
 }
 
