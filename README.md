@@ -35,14 +35,14 @@ Before getting started, ensure you have the following packages installed:
 git clone https://github.com/Shinji13/I3-Setup
 ```
 
-2. Navigate to the directory and provide execute permission to the install script.
+2. Navigate to the directory and provide execute permission to the setup script.
 
 ```bash
  cd I3-Setup
  chmod +x setup.sh
 ```
 
-3. Run install.sh and select a theme.
+3. Run setup.sh and select a theme.
 
 ```bash
 ./setup.sh
