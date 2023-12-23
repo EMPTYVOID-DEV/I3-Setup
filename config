@@ -120,7 +120,7 @@ set $ws10 "10"
 
 # application workspaces mapping
 
-for_window [class="code"] move to workspace $ws1 
+for_window [class="Code"] move to workspace $ws1 
 for_window [class="Google-chrome"] move to workspace $ws2 
 for_window [class="firefox-aurora"] move to workspace $ws2
 for_window [class="Spotify"] move to workspace $ws3 
